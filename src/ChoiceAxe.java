@@ -6,6 +6,7 @@ public class ChoiceAxe {
         Scanner sc = new Scanner(System.in);
         long slowPrintWaitTime = 1;
         long dotPrintTime = 1;
+        String tab = sc.nextLine();
 
         String enter = "";
         System.out.println("You selected an axe.");
@@ -24,7 +25,6 @@ public class ChoiceAxe {
         enter = sc.nextLine();
         System.out.println();
         Util.slowPrint("Please press tab to break the tree", slowPrintWaitTime);
-        String tab = sc.nextLine();
         tab = sc.nextLine();
         System.out.println();
         Util.slowPrint("You're still not able to break the tree, hit the tab button again.", slowPrintWaitTime);
