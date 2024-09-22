@@ -5,7 +5,7 @@ public class FirstDay {
     public static boolean playFirstDay() {
 
         Scanner sc = new Scanner(System.in);
-        long slowPrintWaitTime  = 1;
+        long slowPrintWaitTime = 1;
         long dotPrintTime = 1;
         String enter = "";
 
@@ -21,32 +21,35 @@ public class FirstDay {
 
             if (choice.equals("wood")) {
                 boolean continueGame = ChoiceWood.playChoiceWood();
-                if(continueGame) {
+                if (continueGame) {
                     continue;
                 } else {
                     isEndOfGame = true;
                     break;
                 }
             } else if (choice.equals("rope")) {
-               boolean continueGame = ChoiceRope.playChoiceRope();
-               if(continueGame) {
-                   continue;
-               }
-               else {
-                   isEndOfGame = true;
-                   break;
-               }
-            } else if (choice.equals("axe")) {
-
-                boolean continueGame = ChoiceAxe.playChoiceAxe();
-                if(continueGame) {
-                    isEndOfGame = false;
-                    break;
-                }
-                else {
+                boolean continueGame = ChoiceRope.playChoiceRope();
+                if (continueGame) {
+                    continue;
+                } else {
                     isEndOfGame = true;
                     break;
                 }
+            } else if (choice.equals("axe")) {
+
+                boolean continueGame = ChoiceAxe.playChoiceAxe();
+                if (continueGame) {
+                    isEndOfGame = false;
+                    break;
+                } else {
+                    isEndOfGame = true;
+                    break;
+                }
+            } else if (choice.equals("baba yaga")) {
+
+                BabaYaga.playChoiceBabaYaga();
+                isEndOfGame = true;
+                break;
             } else {
                 System.out.println("Invalid selection. Please try again");
             }
@@ -70,4 +73,5 @@ public class FirstDay {
         Util.displayMessageWithEnter("'How...?'");
         Util.displayMessageWithEnter("'The voice speaks up again, “You will only choose one resource to get to the other side…you don't want to stay out in the cold…right?'");
     }
+
 }

@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void mainOne(String[] args) {
-
+        YesString.yesString();
     }
 
     public static void main(String[] args) {
@@ -16,10 +16,13 @@ public class Main {
 
         //First Night
         if (!isEndOfGame) {
-            FirstNight.playFirstNight();
+            isEndOfGame = FirstNight.playFirstNight();
         }
-        else {
-            System.out.print("Thanks for playing, bye!");
+
+        if(!isEndOfGame) {
+            SecondDay.playSecondDay();
         }
+
+        System.out.print("Thanks for playing, bye!");
     }
 }

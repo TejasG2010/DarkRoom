@@ -32,26 +32,27 @@ public class FirstNight {
         Util.displayMessageWithEnter("As you look down, you see a chest labeled resources");
         Util.displayMessageWithEnter("You try opening the chest, but you see a lock");
         Util.displayMessageWithEnter("There is a 'Note: YAMAHABLSSCMM (Case Sensitive), there are 2 words one with 7 words while another with 5'");
-        String inputTwo = Util.codeTwo("Unscramble the word to access the cage...").toLowerCase();
+        String inputTwo = Util.codeTwo("Unscramble the word to access the cage...").toUpperCase();
         if (!"ABYSMAL CHASM".equals(inputTwo)) {
-            inputTwo = Util.codeTwo("Invalid input, please retype the code..");
+            inputTwo = Util.codeTwo("Invalid input, please retype the code..").toUpperCase();
             if (!"ABYSMAL CHASM".equals(inputTwo)) {
                 Util.displayMessageWithEnter("*Bai* You are not smart enough to open the chest, you will die now.");
-                return false;
+                return true;
             }
         }
-        else {
-            Util.displayMessageWithEnter("*Bai* You have opened the chest, chosen one..");
-            Util.displayMessageWithEnter("*Bai* You found a matchstick, a radio, and 10 coconuts.");
-            String eat = Util.displayMessageWithStringInput("Type to eat to eat.");
-            eat = sc.nextLine();
-            Util.displayMessageWithEnter("You have eaten one coconut, your energy levels have increased to 60%");
-            Util.displayMessageWithEnter("*Bai* Your inventory consists of an Axe, a matchstick, a radio and a few coconuts, you have only one more spot left");
-            Util.displayMessageWithEnter("*Bai* We have provided you a bed to sleep with. Be careful chosen one, there is something wrong... I feel it...");
-            Util.displayDotsWithEnter("...");
-            Util.displayMessageWithEnter("You hear rustling. You're tired. You had a good sleep, and your energy levels have increased to 90%.");
-            Util.displayMessageWithEnter("*Bai* Hurry. You are running out of time. It is here. I can sense it. There is string under your bed, you can take it or leave it.");
-        }
-        return true;
+        Util.displayMessageWithEnter("*Bai* You have opened the chest, chosen one..");
+        Util.displayMessageWithEnter("*Bai* You found a matchstick, a radio, and 10 coconuts.");
+        String eat = Util.displayMessageWithStringInput("Type to eat to eat.");
+        eat = sc.nextLine();
+        Util.displayMessageWithEnter("You have eaten one coconut, your energy levels have increased to 60%");
+        Util.displayMessageWithEnter("*Bai* Your inventory consists of an Axe, a matchstick, a radio and a few coconuts, you have only one more spot left");
+        Util.displayMessageWithEnter("*Bai* We have provided you a bed to sleep with. Be careful chosen one, there is something wrong... I feel it...");
+        Util.displayDotsWithEnter("...");
+        Util.displayMessageWithEnter("You hear rustling. You're tired. You had a good sleep, and your energy levels have increased to 90%.");
+        Util.displayMessageWithEnter("*Bai* Hurry. You are running out of time. It is here. I can sense it. There is string under your bed, you can take it or leave it.");
+
+        boolean continued = YesString.yesString();
+
+        return !continued;
     }
 }
