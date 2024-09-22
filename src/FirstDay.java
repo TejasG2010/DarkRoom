@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class FirstDay {
 
-    public static void playFirstDay() {
+    public static boolean playFirstDay() {
 
         Scanner sc = new Scanner(System.in);
         long slowPrintWaitTime  = 1;
@@ -24,6 +24,7 @@ public class FirstDay {
                 if(continueGame) {
                     continue;
                 } else {
+                    isEndOfGame = true;
                     break;
                 }
             } else if (choice.equals("rope")) {
@@ -32,21 +33,25 @@ public class FirstDay {
                    continue;
                }
                else {
+                   isEndOfGame = true;
                    break;
                }
             } else if (choice.equals("axe")) {
 
                 boolean continueGame = ChoiceAxe.playChoiceAxe();
                 if(continueGame) {
-                    continue;
+                    isEndOfGame = false;
+                    break;
                 }
                 else {
+                    isEndOfGame = true;
                     break;
                 }
             } else {
                 System.out.println("Invalid selection. Please try again");
             }
         } while (!isEndOfGame);
+        return isEndOfGame;
     }
 
     private static void displayFirstDayMessages() {
@@ -62,7 +67,7 @@ public class FirstDay {
         Util.displayMessageWithEnter("The minute you say that…magical items appear in front of you.");
         Util.displayMessageWithEnter("There are 10 pieces of wood, rope, and an axe.");
         Util.displayMessageWithEnter("The mysterious voice speaks up, 'Choose one... and one only.'");
-        Util.displayMessageWithEnter("'How..?'");
+        Util.displayMessageWithEnter("'How...?'");
         Util.displayMessageWithEnter("'The voice speaks up again, “You will only choose one resource to get to the other side…you don't want to stay out in the cold…right?'");
     }
 }
