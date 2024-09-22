@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void mainOne(String[] args) {
+    public static void mainOnr(String[] args) {
         YesString.yesString();
     }
 

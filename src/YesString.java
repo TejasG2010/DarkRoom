@@ -26,36 +26,35 @@ public class YesString {
                         System.out.println("Invalid input, too many attempts, your game has ended, you have no way to proceed.");
                         return false;
                     }
-                } else {
-                    Util.displayMessageWithEnter("You have killed the Mananngall, 1/5 dead.");
-                    Util.displayMessageWithEnter("*Bai* I will help you, you just need to kill one more.");
-                    input2 = Util.displayMessageWithNumberTwoInput("Please press 2 to kill the creatures");
+                }
+                Util.displayMessageWithEnter("You have killed the Mananngall, 1/5 dead.");
+                Util.displayMessageWithEnter("*Bai* I will help you, you just need to kill one more.");
+                input2 = Util.displayMessageWithNumberTwoInput("Please press 2 to kill the creatures");
+                if (input2 != 2) {
+                    System.out.println("Invalid input, please retype 2");
+                    input2 = Util.displayMessageWithNumberTwoInput("Please type 2 to break the tree");
                     if (input2 != 2) {
-                        System.out.println("Invalid input, please retype 2");
-                        input2 = Util.displayMessageWithNumberTwoInput("Please type 2 to break the tree");
-                        if (input2 != 2) {
-                            System.out.println("Invalid input, too many attempts, your game has ended, you have no way to proceed.");
-                            return false;
-                        }
-                    } else {
-                        Util.displayMessageWithEnter("Mananngall killed, 2/5 dead. Your axe has broken. Use the string to rebuild the axe.");
-                        Util.displayMessageWithEnter("*Bai* Don't worry chosen one, I will kill the rest. Run out of the building, there is no time.");
-                        Util.displayMessageWithEnter("Remember, you have an axe to defend yourself, a radio, a matchstick, and a few coconuts.");
-                        Util.displayMessageWithEnter("You get to the exit. There is another key,");
-                        Util.displayMessageWithEnter("You see the key. It says beware of the White Marsh, and there is a ripped part of the note...");
-                        Util.displayMessageWithEnter("It says, also known as VARZY. What is VARZY? What is the White Marsh?");
-                        String input3 = Util.codeOne("You need to decipher what VARZY means. Please type the code to exit the building.");
-                        if (!"BAI ZE".equals(input3)) {
-                            System.out.println("Invalid input. Try again.");
-                            input3 = Util.codeOne("Please type the code to exit the building. (Hint: Think of each letters opposite, a = z, b = y, and flip it backwards.)");
-                            if (!"BAI ZE".equals(input3)) {
-                                System.out.println("*Bai* You are not smart enough to exit the building, you will die now.");
-                                return false;
-                            }
-                            Util.displayMessageWithEnter("You have finally exit the building.");
-                        }
+                        System.out.println("Invalid input, too many attempts, your game has ended, you have no way to proceed.");
+                        return false;
                     }
                 }
+                Util.displayMessageWithEnter("Mananngall killed, 2/5 dead. Your axe has broken. Use the string to rebuild the axe.");
+                Util.displayMessageWithEnter("*Bai* Don't worry chosen one, I will kill the rest. Run out of the building, there is no time.");
+                Util.displayMessageWithEnter("Remember, you have an axe to defend yourself, a radio, a matchstick, and a few coconuts.");
+                Util.displayMessageWithEnter("You get to the exit. There is another key,");
+                Util.displayMessageWithEnter("You see the key. It says beware of the White Marsh, and there is a ripped part of the note...");
+                Util.displayMessageWithEnter("It says, also known as VARZY. What is VARZY? What is the White Marsh?");
+                String input3 = Util.codeOne("You need to decipher what VARZY means. Please type the code to exit the building.").toUpperCase();
+                if (!"BAI ZE".equals(input3)) {
+                    System.out.println("Invalid input. Try again.");
+                    input3 = Util.codeOne("Please type the code to exit the building. (Hint: Think of each letters opposite, a = z, b = y, and flip it backwards.)").toUpperCase();
+                    if (!"BAI ZE".equals(input3)) {
+                        System.out.println("*Bai* You are not smart enough to exit the building, you will die now.");
+                        return false;
+                    }
+                }
+                Util.displayMessageWithEnter("You have finally exit the building.");
+                Util.displayMessageWithEnter("You don't understand, how is Bai Ze evil? Why should we beware it?");
                 yesString = true;
             } else if (choiceTwo.equals("no")) {
                 System.out.print("You have selected not to take the string, you still have one inventory spot left");
@@ -73,37 +72,35 @@ public class YesString {
                         System.out.println("Invalid input, too many attempts, your game has ended, you have no way to proceed.");
                         return false;
                     }
-                } else {
-                    Util.displayMessageWithEnter("You have killed the Mananngall, 1/5 dead.");
-                    Util.displayMessageWithEnter("*Bai* I will help you, you just need to kill one more.");
-                    input4 = Util.displayMessageWithNumberTwoInput("Please press 2 to kill the creatures");
+                }
+                Util.displayMessageWithEnter("You have killed the Mananngall, 1/5 dead.");
+                Util.displayMessageWithEnter("*Bai* I will help you, you just need to kill one more.");
+                input4 = Util.displayMessageWithNumberTwoInput("Please press 2 to kill the creatures");
+                if (input4 != 2) {
+                    System.out.println("Invalid input, please retype 2");
+                    input4 = Util.displayMessageWithNumberTwoInput("Please type 2 to break the tree");
                     if (input4 != 2) {
-                        System.out.println("Invalid input, please retype 2");
-                        input4 = Util.displayMessageWithNumberTwoInput("Please type 2 to break the tree");
-                        if (input4 != 2) {
-                            System.out.println("Invalid input, too many attempts, your game has ended, you have no way to proceed.");
-                            return false;
-                        }
-                    } else {
-                        Util.displayMessageWithEnter("Mananngall killed, 2/5 dead. Your axe has broken. Use the string to rebuild the axe.");
-                        Util.displayMessageWithEnter("*Bai* Don't worry chosen one, I will kill the rest. Run out of the building, there is no time.");
-                        Util.displayMessageWithEnter("Remember, you have an axe to defend yourself, a radio, a matchstick, and a few coconuts.");
-                        Util.displayMessageWithEnter("You get to the exit. There is another key,");
-                        Util.displayMessageWithEnter("You see the key. It says beware of the White Marsh, and there is a ripped part of the note...");
-                        Util.displayMessageWithEnter("It says, also known as VARZY. What is VARZY? What is the White Marsh?");
-                        String input3 = Util.codeOne("You need to decipher what VARZY means. Please type the code to exit the building.").toUpperCase();
-                        if (!"BAI ZE".equals(input3)) {
-                            System.out.println("Invalid input. Try again.");
-                            input3 = Util.codeOne("Please type the code to exit the building. (Hint: Think of each letters opposite, a = z, b = y, and flip it backwards.)").toUpperCase();
-                            if (!"BAI ZE".equals(input3)) {
-                                System.out.println("*Bai* You are not smart enough to exit the building, you will die now.");
-                                return false;
-                            }
-                            Util.displayMessageWithEnter("You have finally exited the building.");
-                            Util.displayMessageWithEnter("You don't understand, how is Bai Ze evil? Why should we beware it?");
-                        }
+                        System.out.println("Invalid input, too many attempts, your game has ended, you have no way to proceed.");
+                        return false;
                     }
                 }
+                Util.displayMessageWithEnter("Mananngall killed, 2/5 dead. Your axe has broken. Use the string to rebuild the axe.");
+                Util.displayMessageWithEnter("*Bai* Don't worry chosen one, I will kill the rest. Run out of the building, there is no time.");
+                Util.displayMessageWithEnter("Remember, you have an axe to defend yourself, a radio, a matchstick, and a few coconuts.");
+                Util.displayMessageWithEnter("You get to the exit. There is another key,");
+                Util.displayMessageWithEnter("You see the key. It says beware of the White Marsh, and there is a ripped part of the note...");
+                Util.displayMessageWithEnter("It says, also known as VARZY. What is VARZY? What is the White Marsh?");
+                String input3 = Util.codeOne("You need to decipher what VARZY means. Please type the code to exit the building.").toUpperCase();
+                if (!"BAI ZE".equals(input3)) {
+                    System.out.println("Invalid input. Try again.");
+                    input3 = Util.codeOne("Please type the code to exit the building. (Hint: Think of each letters opposite, a = z, b = y, and flip it backwards.)").toUpperCase();
+                    if (!"BAI ZE".equals(input3)) {
+                        System.out.println("*Bai* You are not smart enough to exit the building, you will die now.");
+                        return false;
+                    }
+                }
+                Util.displayMessageWithEnter("You have finally exited the building.");
+                Util.displayMessageWithEnter("You don't understand, how is Bai Ze evil? Why should we beware it?");
                 yesString = true;
             } else {
                 System.out.print("Invalid Input... Please Try Again: ");
