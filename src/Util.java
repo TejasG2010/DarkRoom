@@ -68,6 +68,17 @@ public class Util {
         System.out.println();
         return codeTwo;
     }
+    public static String codeThree(String message) {
+        Util.slowPrint(message, slowPrintWaitTime);
+        System.out.println();
+        String codeThree = sccode.nextLine();
+        if(codeThree == null || codeThree.trim().isEmpty()) {
+            codeThree = sc.nextLine();
+        }
+        System.out.println();
+        return codeThree;
+    }
+
 
 
 }

@@ -16,7 +16,7 @@ public class FirstNight {
             input = Util.codeOne("Please type the code to enter the building (hint: 4 digits, one digit is an Uppercase letter, others are numbers, it is also where you are... IRL)");
             if (!"W213".equals(input)) {
                 System.out.println("You are not smart enough to enter the building, you will die now.");
-                return false;
+                return true;
             }
         }
         Util.displayMessageWithEnter("*Mysterious Voice* You are in the Abysmal Chasm");
